@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Chirp;
+  src: url(./assets/fonts/Chirp.ttf) format('ttf');
+  font-weight: normal;
+}
+@font-face {
+  font-family: Chirp;
+  src: url(./assets/fonts/ChirpMedium.ttf) format('ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Chirp;
+  src: url(./assets/fonts/ChirpBold.ttf) format('ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: Chirp;
+  src: url(./assets/fonts/ChirpHeavy.ttf) format('ttf');
+  font-weight: bolder;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Chirp', Helvetica, sans-serif !important;
+  color: white;
+}
+
+body {
+  background-color: #101418;
+}
+
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.animate-flicker {
+  -webkit-animation: flickerAnimation 1.3s linear infinite;
+  -moz-animation: flickerAnimation 1.3s linear infinite;
+  -o-animation: flickerAnimation 1.3s linear infinite;
+  animation: flickerAnimation 1.3s linear infinite;
+}

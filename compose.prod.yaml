@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  portfolio-v3-prod:
+    build:
+      context: .
+      dockerfile: dockerfile.prod
+    image: portfolio-v3:prod
+    ports:
+      - 8080:80
+    environment:
+      - NODE_ENV=production
