@@ -78,7 +78,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           '&.Mui-selected': {
-            backgroundColor: blue['500'],
+            backgroundColor: blue['700'],
             '& span': {
               fontWeight: 'bold'
             }

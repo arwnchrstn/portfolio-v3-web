@@ -13,8 +13,7 @@ import {
   ListItemText,
   Stack
 } from '@mui/material'
-import { Outlet } from 'react-router-dom'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
 import CustomDrawer from '@/components/ui/CustomDrawer'
 import Logo from '@/components/ui/Logo'
@@ -30,7 +29,7 @@ const listItems = [
 
 function MainLayout() {
   const { pathname } = useLocation()
-  const isSmallScreen = useIsSmallScreen()
+  const { isSmallScreen } = useIsSmallScreen()
 
   return (
     <Container
@@ -67,7 +66,7 @@ function MainLayout() {
           </List>
         </Box>
       </CustomDrawer>
-      <Box flex={1} p={isSmallScreen ? 0 : 4}>
+      <Box flex={1} p={isSmallScreen ? 0 : 3}>
         <Outlet />
       </Box>
     </Container>

@@ -1,7 +1,9 @@
 import { Box, Button, Typography } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function PageError() {
+  const navigate = useNavigate()
+
   return (
     <Box
       sx={{
@@ -13,7 +15,7 @@ export default function PageError() {
       }}
     >
       <Typography>An error occurred</Typography>
-      <Button variant="contained" component={Link} to="/" size="small">
+      <Button variant="contained" onClick={() => navigate(0)} size="small">
         Reload
       </Button>
     </Box>

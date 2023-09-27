@@ -8,7 +8,7 @@ type TCustomDrawerProps = {
 }
 
 const CustomDrawer = ({ children }: TCustomDrawerProps) => {
-  const isSmallScreen = useIsSmallScreen()
+  const { isSmallScreen, isSmallestScreen } = useIsSmallScreen()
 
   return (
     <Box
@@ -23,6 +23,7 @@ const CustomDrawer = ({ children }: TCustomDrawerProps) => {
         borderRight: 'thin solid gray'
       }}
       width={isSmallScreen ? 97 : 300}
+      display={isSmallestScreen ? 'none' : 'block'}
     >
       {children}
     </Box>

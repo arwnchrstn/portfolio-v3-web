@@ -19,6 +19,7 @@ import {
 import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 
 const SlideTransition = forwardRef(function Transition(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   props: TransitionProps & { children: ReactElement<any, any> },
   ref: Ref<unknown>
 ) {
@@ -29,15 +30,17 @@ type IConfirmArwenDialog = {
   openDialog: boolean
   setOpenDialog: Dispatch<SetStateAction<boolean>>
   children: ReactNode
+  title?: string
 }
 
 export default function DialogComponent({
   openDialog,
   setOpenDialog,
-  children
+  children,
+  title
 }: IConfirmArwenDialog) {
   const handleClose = () => setOpenDialog(false)
-  const isSmallScreen = useIsSmallScreen()
+  const { isSmallestScreen } = useIsSmallScreen()
 
   return (
     <Dialog
@@ -45,10 +48,17 @@ export default function DialogComponent({
       maxWidth="sm"
       fullWidth
       TransitionComponent={SlideTransition}
-      fullScreen={isSmallScreen}
+      fullScreen={isSmallestScreen}
     >
-      <DialogTitle display="flex" flexDirection="column" alignItems="flex-end">
-        <IconButton aria-label="close" onClick={handleClose}>
+      <DialogTitle
+        display="flex"
+        flexDirection="row"
+        alignItems="center"
+        justifyContent={title ? 'space-between' : 'flex-end'}
+        fontWeight="bold"
+      >
+        {title}
+        <IconButton aria-label="close" onClick={handleClose} size="large">
           <CloseIcon />
         </IconButton>
       </DialogTitle>

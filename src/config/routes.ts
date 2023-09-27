@@ -1,4 +1,5 @@
 import { lazy } from 'react'
+
 import { TRoutes } from '@/models/TRoutes'
 
 const LandingPage = lazy(
@@ -10,8 +11,15 @@ const Page404 = lazy(
 const MainLayout = lazy(
   () => import('@/pages/MainLayout')
 ) as unknown as TRoutes['element']
+
 const About = lazy(
   () => import('@/pages/MainLayout/About')
+) as unknown as TRoutes['element']
+const Experience = lazy(
+  () => import('@/pages/MainLayout/Experience')
+) as unknown as TRoutes['element']
+const Education = lazy(
+  () => import('@/pages/MainLayout/Education')
 ) as unknown as TRoutes['element']
 
 export const mainRoutes: TRoutes[] = [
@@ -23,6 +31,10 @@ export const nestedRoutes: TRoutes[] = [
   {
     path: '/rwnchrstn',
     element: MainLayout,
-    children: [{ path: 'about', element: About }]
+    children: [
+      { path: 'about', element: About },
+      { path: 'experience', element: Experience },
+      { path: 'education', element: Education }
+    ]
   }
 ]

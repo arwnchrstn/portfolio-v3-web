@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
-import Title from '../ui/Title'
+
+import Title from "@/components/ui/Title"
 
 export default function AboutMe() {
   const myAge = new Date().getFullYear() - 2000

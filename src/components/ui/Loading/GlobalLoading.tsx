@@ -1,17 +1,10 @@
-import { Box } from '@mui/material'
+import { Stack } from '@mui/material'
 
 import ALogo from '@/assets/Logo.png'
 
 function GlobalLoading() {
   return (
-    <Box
-      sx={{
-        height: '100dvh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}
-    >
+    <Stack justifyContent="center" alignItems="center" height="100dvh">
       <img
         alt="rwnchrstn.dev logo"
         src={ALogo}
@@ -23,7 +16,7 @@ function GlobalLoading() {
         }}
         className="animate-flicker"
       />
-    </Box>
+    </Stack>
   )
 }
 
