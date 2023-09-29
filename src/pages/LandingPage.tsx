@@ -10,9 +10,24 @@ function LandingPage() {
   useSetPageTitle('Home')
 
   return (
-    <Container sx={{ height: '100dvh', py: 2, px: 3 }}>
+    <Container
+      sx={{
+        height: '100dvh',
+        py: 2,
+        px: 3,
+        display: 'flex',
+        flexDirection: 'column'
+      }}
+    >
       <Navbar />
-      <Grid container gap={10} alignItems="center" mt={{ xs: 2, md: 8 }} pb={4}>
+      <Grid
+        container
+        gap={10}
+        alignItems="center"
+        mt={{ xs: 2, md: 8 }}
+        pb={4}
+        flex={1}
+      >
         <Grid item xs={12} md display={{ xs: 'none', md: 'block' }}>
           <img
             alt="rwnchrstn.dev logo"
@@ -57,8 +72,8 @@ function LandingPage() {
               color="GrayText"
               mt={7}
             >
-              A Twitter inspired portfolio built using React, TypeScript and
-              Material UI.
+              A Twitter inspired portfolio built using React with Vite,
+              TypeScript and Material UI.
             </Typography>
           </Box>
         </Grid>

@@ -13,4 +13,4 @@ export const SigninSchema = yup.object().shape({
     .required('Please enter secret key')
 })
 
-export type ISigninSchema = yup.InferType<typeof SigninSchema>
+export type TSigninSchema = yup.InferType<typeof SigninSchema>

@@ -1,4 +1,4 @@
-import { blue } from '@mui/material/colors'
+import { blue, grey } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
 
 export const DARK = '#101418'
@@ -40,8 +40,15 @@ export const theme = createTheme({
           '&>fieldset': {
             borderColor: 'grey'
           },
-          '&:hover': {
-            borderColor: 'grey'
+          '&:hover:not(.Mui-error) > fieldset.MuiOutlinedInput-notchedOutline':
+            {
+              borderColor: blue['700']
+            },
+          '&>input': {
+            color: grey['400']
+          },
+          '&>textarea': {
+            color: grey['400']
           }
         }
       }

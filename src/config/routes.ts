@@ -21,6 +21,12 @@ const Experience = lazy(
 const Education = lazy(
   () => import('@/pages/MainLayout/Education')
 ) as unknown as TRoutes['element']
+const Technologies = lazy(
+  () => import('@/pages/MainLayout/Technologies')
+) as unknown as TRoutes['element']
+const Connect = lazy(
+  () => import('@/pages/MainLayout/Connect')
+) as unknown as TRoutes['element']
 
 export const mainRoutes: TRoutes[] = [
   { path: '/', element: LandingPage },
@@ -34,7 +40,9 @@ export const nestedRoutes: TRoutes[] = [
     children: [
       { path: 'about', element: About },
       { path: 'experience', element: Experience },
-      { path: 'education', element: Education }
+      { path: 'education', element: Education },
+      { path: 'technologies', element: Technologies },
+      { path: 'connect', element: Connect }
     ]
   }
 ]

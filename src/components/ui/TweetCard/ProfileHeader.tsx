@@ -5,7 +5,7 @@ import { Box, Stack, Typography } from '@mui/material'
 
 function ProfileHeader() {
   return (
-    <Stack gap={0.5} mb={5}>
+    <Stack gap={0.5} mb={2.5}>
       <Typography fontWeight="bold" mb={1.5}>
         awen / wen
       </Typography>

@@ -1,6 +1,5 @@
 import SGV from '@/assets/sgv-logo-white.png'
 import ExperienceCard from '@/components/MainPage/ExperienceCard'
-import Title from '@/components/ui/Title'
 import TweetCard from '@/components/ui/TweetCard'
 import ProfileHeader from '@/components/ui/TweetCard/ProfileHeader'
 import TweetLayout from '@/components/ui/TweetLayout'
@@ -42,9 +41,8 @@ function Experience() {
   useSetPageTitle('Experience')
 
   return (
-    <TweetLayout>
+    <TweetLayout title="Work Experience">
       <ProfileHeader />
-      <Title title="Work Experience" />
 
       {experiences.map((exp, index) => (
         <TweetCard key={index} tweet={<ExperienceCard {...exp} />} />

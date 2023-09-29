@@ -16,7 +16,7 @@ function ExperienceCard(props: TExperienceCardProps) {
           {props.img && <img src={props.img} alt="sgv logo" width="100%" />}
           {!props.img && <WorkIcon sx={{ width: '100%', fontSize: 100 }} />}
         </Grid>
-        <Grid item xs={12} sm={8.8}>
+        <Grid item xs={12} sm={9.5}>
           <Typography variant="h6" fontWeight="bold">
             {props.companySchoolName}
           </Typography>

@@ -1,9 +1,8 @@
 import { Stack, Typography } from '@mui/material'
 
+import Buttons from '@/components/ui/TweetCard/Buttons'
+import TweetHeader from '@/components/ui/TweetCard/TweetHeader'
 import useIsSmallScreen from '@/hooks/useIsSmallScreen'
-
-import Buttons from './Buttons'
-import TweetHeader from './TweetHeader'
 
 interface TTweetCard {
   tweet: string | React.JSX.Element | React.ReactNode

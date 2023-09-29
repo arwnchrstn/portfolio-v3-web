@@ -1,10 +1,11 @@
 import {
   BaseTextFieldProps,
   StandardTextFieldProps,
-  TextField} from '@mui/material'
+  TextField
+} from '@mui/material'
 import { Control, Controller, FieldValues, Path } from 'react-hook-form'
 
-type ITextInputProps<T extends FieldValues> = {
+type TTextInputProps<T extends FieldValues> = {
   control: Control<T>
   name: Path<T>
 } & (BaseTextFieldProps | StandardTextFieldProps)
@@ -13,7 +14,7 @@ export default function TextInput<T extends FieldValues>({
   control,
   name,
   ...rest
-}: ITextInputProps<T>) {
+}: TTextInputProps<T>) {
   return (
     <Controller
       render={({ field, fieldState: { error } }) => (
@@ -24,9 +25,6 @@ export default function TextInput<T extends FieldValues>({
           helperText={error?.message}
           color="primary"
           variant="outlined"
-          sx={{
-            input: { color: 'white' }
-          }}
         />
       )}
       name={name}

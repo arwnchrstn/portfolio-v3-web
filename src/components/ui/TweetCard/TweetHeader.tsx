@@ -8,12 +8,13 @@ function TweetHeader() {
 
   return (
     <Stack gap={1} direction="row" alignItems="center">
-      <Box
-        borderRadius="50%"
-        overflow="hidden"
-        width={isSmallestScreen ? 40 : 50}
-      >
-        <img src={Profile} alt="profile" width="100%" />
+      <Box width={isSmallestScreen ? 40 : 50}>
+        <img
+          src={Profile}
+          alt="profile"
+          width="100%"
+          style={{ aspectRatio: '1/1', borderRadius: '50%' }}
+        />
       </Box>
       <Box>
         <Typography fontWeight="bold">awen</Typography>

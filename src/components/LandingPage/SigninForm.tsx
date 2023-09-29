@@ -2,40 +2,35 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { Button, Divider, Stack } from '@mui/material'
 import { useForm } from 'react-hook-form'
 
-import { ISigninSchema,SigninSchema } from '@/models/form/SigninSchema'
+import TextInput from '@/components/ui/TextInput'
+import { SigninSchema, TSigninSchema } from '@/models/form/SigninSchema'
 
-import TextInput from '../ui/TextInput'
-
-const defaultFormValue: ISigninSchema = {
+const defaultFormValue: TSigninSchema = {
   username: '',
   secretKey: ''
 }
 
 export default function SigninForm() {
-  const { handleSubmit, control } = useForm<ISigninSchema>({
+  const { handleSubmit, control } = useForm({
     defaultValues: defaultFormValue,
     reValidateMode: 'onChange',
     resetOptions: {
       keepDefaultValues: true
     },
     mode: 'onSubmit',
-    resolver: yupResolver<ISigninSchema>(SigninSchema)
+    resolver: yupResolver(SigninSchema)
   })
 
-  const handleSignin = (data: ISigninSchema) => {
+  const handleSignin = (data: TSigninSchema) => {
     console.log(data)
   }
 
   return (
     <Stack mt={3}>
       <Stack gap={2}>
-        <TextInput<ISigninSchema>
-          control={control}
-          name="username"
-          label="Enter username"
-        />
+        <TextInput control={control} name="username" label="Enter username" />
 
-        <TextInput<ISigninSchema>
+        <TextInput
           control={control}
           name="secretKey"
           label="Enter secret key"

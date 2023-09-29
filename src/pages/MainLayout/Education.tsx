@@ -1,7 +1,6 @@
 import PSHS from '@/assets/PSHS.png'
 import PUP from '@/assets/PUPLogo.png'
 import ExperienceCard from '@/components/MainPage/ExperienceCard'
-import Title from '@/components/ui/Title'
 import TweetCard from '@/components/ui/TweetCard'
 import ProfileHeader from '@/components/ui/TweetCard/ProfileHeader'
 import TweetLayout from '@/components/ui/TweetLayout'
@@ -36,9 +35,8 @@ function Education() {
   useSetPageTitle('Education')
 
   return (
-    <TweetLayout>
+    <TweetLayout title="Education">
       <ProfileHeader />
-      <Title title="Education" />
 
       {education.map((exp, index) => (
         <TweetCard key={index} tweet={<ExperienceCard {...exp} />} />

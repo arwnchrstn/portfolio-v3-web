@@ -25,11 +25,16 @@ function ImageBanner() {
   }
 
   return (
-    <Box
-      sx={{ height: '100%', aspectRatio: '16/5', position: 'relative' }}
-      mb={isSmallScreen ? '13%' : '11%'}
-    >
-      <img alt="Banner" src={Banner} width="100%" />
+    <Box sx={{ position: 'relative' }} mb={isSmallScreen ? '13%' : '10%'}>
+      <img
+        alt="Banner"
+        src={Banner}
+        width="100%"
+        style={{
+          aspectRatio: isSmallScreen ? '16/5' : '16/4',
+          objectFit: 'cover'
+        }}
+      />
 
       <Button
         variant="outlined"
@@ -50,7 +55,7 @@ function ImageBanner() {
           width: '100%',
           aspectRatio: '1/1',
           position: 'absolute',
-          maxWidth: '20%',
+          maxWidth: isSmallScreen ? '20%' : '17%',
           bottom: '-28%',
           left: '5%'
         }}

@@ -1,4 +1,3 @@
-import Title from '@/components/ui/Title'
 import TweetCard from '@/components/ui/TweetCard'
 import ProfileHeader from '@/components/ui/TweetCard/ProfileHeader'
 import TweetLayout from '@/components/ui/TweetLayout'
@@ -8,9 +7,8 @@ function About() {
   useSetPageTitle('About')
 
   return (
-    <TweetLayout>
+    <TweetLayout title="About Me">
       <ProfileHeader />
-      <Title title="About Me" />
 
       <TweetCard tweet="Hi, I am Arwen Christian Ceres, a Full Stack Web Developer based in the Philippines" />
       <TweetCard tweet="I mainly use JavaScript / TypeScript for both front-end and back-end development" />

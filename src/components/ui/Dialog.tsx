@@ -26,7 +26,7 @@ const SlideTransition = forwardRef(function Transition(
   return <Slide direction="up" ref={ref} {...props} />
 })
 
-type IConfirmArwenDialog = {
+type TConfirmArwenDialog = {
   openDialog: boolean
   setOpenDialog: Dispatch<SetStateAction<boolean>>
   children: ReactNode
@@ -38,7 +38,7 @@ export default function DialogComponent({
   setOpenDialog,
   children,
   title
-}: IConfirmArwenDialog) {
+}: TConfirmArwenDialog) {
   const handleClose = () => setOpenDialog(false)
   const { isSmallestScreen } = useIsSmallScreen()
 
