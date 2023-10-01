@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 
 import ImageBanner from '@/components/ui/ImageBanner'
 import Title from '@/components/ui/Title'
+import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 
 function TweetLayout({
   children,
@@ -11,8 +12,9 @@ function TweetLayout({
   children: ReactNode
   title: string
 }) {
+  const { isSmallScreen } = useIsSmallScreen()
   return (
-    <Box pb={8} position={['sticky', '-webkit-sticky']}>
+    <Box pb={isSmallScreen ? 10 : 8} position={['sticky', '-webkit-sticky']}>
       <Title title={title} />
       <ImageBanner />
 

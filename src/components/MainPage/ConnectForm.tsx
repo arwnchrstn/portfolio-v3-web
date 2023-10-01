@@ -48,14 +48,14 @@ function ConnectForm({ isOpen }: { isOpen?: boolean }) {
         <TextInput
           control={control}
           name="name"
-          label="Name"
+          label="Your name"
           size={isSmallScreen ? 'medium' : 'small'}
         />
 
         <TextInput
           control={control}
           name="email"
-          label="Email"
+          label="Your email"
           size={isSmallScreen ? 'medium' : 'small'}
         />
 

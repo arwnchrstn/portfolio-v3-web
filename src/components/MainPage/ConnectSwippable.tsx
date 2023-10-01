@@ -7,7 +7,7 @@ import ConnectForm from '@/components/MainPage/ConnectForm'
 import { DARK } from '@/config/theme'
 import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 
-const OPEN_HEIGHT = '70%'
+const OPEN_HEIGHT = '65%'
 const CLOSE_HEIGHT = '55px'
 
 function ConnectSwippable() {

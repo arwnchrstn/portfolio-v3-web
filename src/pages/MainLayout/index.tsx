@@ -1,8 +1,3 @@
-import CodeIcon from '@mui/icons-material/Code'
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'
-import PersonIcon from '@mui/icons-material/Person'
-import SchoolIcon from '@mui/icons-material/School'
-import WorkIcon from '@mui/icons-material/Work'
 import {
   Box,
   Container,
@@ -19,18 +14,8 @@ import ConnectSwippable from '@/components/MainPage/ConnectSwippable'
 import CustomDrawer from '@/components/ui/CustomDrawer'
 import Logo from '@/components/ui/Logo'
 import useIsSmallScreen from '@/hooks/useIsSmallScreen'
-
-const listItems = [
-  { text: 'About', icon: <PersonIcon />, path: 'about' },
-  { text: 'Experience', icon: <WorkIcon />, path: 'experience' },
-  { text: 'Education', icon: <SchoolIcon />, path: 'education' },
-  { text: 'Techologies', icon: <CodeIcon />, path: 'technologies' },
-  {
-    text: "Let's Connect",
-    icon: <ConnectWithoutContactIcon />,
-    path: 'connect'
-  }
-]
+import BottomAppbar from '@/components/ui/BottomAppbar'
+import { navLinks } from '@/config/navlinks'
 
 function MainLayout() {
   const { pathname } = useLocation()
@@ -59,7 +44,7 @@ function MainLayout() {
               flexDirection: 'column'
             }}
           >
-            {listItems.map((list, index) => {
+            {navLinks.map((list, index) => {
               if (list.path === 'connect' && !isSmallScreen) return
 
               return (
@@ -69,7 +54,7 @@ function MainLayout() {
                     component={Link}
                     to={list.path}
                   >
-                    <ListItemIcon>{list.icon}</ListItemIcon>
+                    <ListItemIcon>{<list.icon />}</ListItemIcon>
                     {!isSmallScreen && <ListItemText primary={list.text} />}
                   </ListItemButton>
                 </ListItem>
@@ -81,6 +66,8 @@ function MainLayout() {
       <Box flex={1} p={0}>
         <Outlet />
       </Box>
+
+      <BottomAppbar />
     </Container>
   )
 }
