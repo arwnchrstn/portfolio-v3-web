@@ -3,32 +3,72 @@ import TweetCard from '@/components/ui/TweetCard'
 import ProfileHeader from '@/components/ui/TweetCard/ProfileHeader'
 import TweetLayout from '@/components/ui/TweetLayout'
 import useSetPageTitle from '@/hooks/useSetPageTitle'
-import * as Icons from 'react-icons/si'
-import { GrDocumentMissing } from 'react-icons/gr'
 import { TTechnologies } from '@/models/TTechnologies'
 
-console.log([
-  'JavaScript',
-  'TypeScript',
-  'React JS',
-  'Next JS',
-  'CSS',
-  'Material UI',
-  'Bootstrap',
-  'Node JS',
-  'Express JS',
-  'Mongo DB',
-  'MySQL',
-  'Postman',
-  'Docker',
-  'Github',
-  'Azure'
-])
-
-const TECHS: TTechnologies[] = [
+const techs: TTechnologies[] = [
   {
     label: 'JavaScript',
     iconName: 'SiJavascript'
+  },
+  {
+    label: 'TypeScript',
+    iconName: 'SiTypescript'
+  },
+  {
+    label: 'React JS',
+    iconName: 'SiReact'
+  },
+  {
+    label: 'Vite',
+    iconName: 'SiVite'
+  },
+  {
+    label: 'Next JS',
+    iconName: 'SiNextdotjs'
+  },
+  {
+    label: 'CSS',
+    iconName: 'SiCss3'
+  },
+  {
+    label: 'Material UI',
+    iconName: 'SiMui'
+  },
+  {
+    label: 'Bootstrap',
+    iconName: 'SiBootstrap'
+  },
+  {
+    label: 'Node JS',
+    iconName: 'SiNodedotjs'
+  },
+  {
+    label: 'Express JS',
+    iconName: 'SiExpress'
+  },
+  {
+    label: 'Mongo DB',
+    iconName: 'SiMongodb'
+  },
+  {
+    label: 'MySql',
+    iconName: 'SiMysql'
+  },
+  {
+    label: 'Postman',
+    iconName: 'SiPostman'
+  },
+  {
+    label: 'Docker',
+    iconName: 'SiDocker'
+  },
+  {
+    label: 'Azure',
+    iconName: 'SiMicrosoftazure'
+  },
+  {
+    label: 'GitHub',
+    iconName: 'SiGithub'
   }
 ]
 
@@ -39,7 +79,11 @@ function Technologies() {
     <TweetLayout title="Technologies">
       <ProfileHeader />
 
-      <TweetCard tweet={<TechChip text="Sample" />} />
+      <TweetCard
+        tweet={techs.map((t, index) => (
+          <TechChip label={t.label} iconName={t.iconName} key={index} />
+        ))}
+      />
     </TweetLayout>
   )
 }

@@ -11,11 +11,11 @@ import {
 import { Link, Outlet, useLocation } from 'react-router-dom'
 
 import ConnectSwippable from '@/components/MainPage/ConnectSwippable'
+import BottomAppbar from '@/components/ui/BottomAppbar'
 import CustomDrawer from '@/components/ui/CustomDrawer'
 import Logo from '@/components/ui/Logo'
-import useIsSmallScreen from '@/hooks/useIsSmallScreen'
-import BottomAppbar from '@/components/ui/BottomAppbar'
 import { navLinks } from '@/config/navlinks'
+import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 
 function MainLayout() {
   const { pathname } = useLocation()

@@ -1,9 +1,10 @@
-import { navLinks } from '@/config/navlinks'
-import { DARK } from '@/config/theme'
-import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 import { AppBar, Box, IconButton, Stack } from '@mui/material'
 import blue from '@mui/material/colors/blue'
 import { useLocation, useNavigate } from 'react-router-dom'
+
+import { navLinks } from '@/config/navlinks'
+import { DARK } from '@/config/theme'
+import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 
 function BottomAppbar() {
   const { isSmallestScreen } = useIsSmallScreen()
@@ -38,7 +39,7 @@ function BottomAppbar() {
                   color="primary"
                   sx={{
                     fill: pathname.includes(link.path) ? blue['700'] : 'white',
-                    fontSize: pathname.includes(link.path) ? '30px' : '28px'
+                    fontSize: '25px'
                   }}
                 />
               }
