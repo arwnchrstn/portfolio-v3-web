@@ -7,7 +7,7 @@ import TextInput from '@/components/ui/TextInput'
 import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 import { ConnectSchema, TConnectSchema } from '@/models/form/ConnectSchema'
 import emailjs from '@emailjs/browser'
-import SnackBar from '@/components/ui/Snackbar'
+import SnackBar from '@/components/ui/SnackBarComponent'
 
 const defaultFormValues: TConnectSchema = {
   email: '',

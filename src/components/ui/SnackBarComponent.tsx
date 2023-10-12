@@ -13,7 +13,7 @@ const Alert = forwardRef<HTMLDivElement, AlertProps>((props, ref) => {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
 })
 
-function SnackBar(props: TSnackBarProps) {
+function SnackBarComponent(props: TSnackBarProps) {
   const handleClose = () => {
     props.setOpen(false)
   }
@@ -38,4 +38,4 @@ function SnackBar(props: TSnackBarProps) {
   )
 }
 
-export default SnackBar
+export default SnackBarComponent
