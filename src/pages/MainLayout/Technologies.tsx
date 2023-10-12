@@ -59,10 +59,6 @@ const techs: TTechnologies[] = [
     iconName: 'SiDocker'
   },
   {
-    label: 'Azure',
-    iconName: 'SiMicrosoftazure'
-  },
-  {
     label: 'GitHub',
     iconName: 'SiGithub'
   }
