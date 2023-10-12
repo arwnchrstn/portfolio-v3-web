@@ -27,6 +27,9 @@ const Technologies = lazy(
 const Connect = lazy(
   () => import('@/pages/MainLayout/Connect')
 ) as unknown as TRoutes['element']
+const Certificates = lazy(
+  () => import('@/pages/MainLayout/Certificates')
+) as unknown as TRoutes['element']
 
 export const mainRoutes: TRoutes[] = [
   { path: '/', element: LandingPage },
@@ -42,7 +45,8 @@ export const nestedRoutes: TRoutes[] = [
       { path: 'experience', element: Experience },
       { path: 'education', element: Education },
       { path: 'technologies', element: Technologies },
-      { path: 'connect', element: Connect }
+      { path: 'connect', element: Connect },
+      { path: 'certificates', element: Certificates }
     ]
   }
 ]

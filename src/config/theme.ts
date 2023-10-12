@@ -16,7 +16,13 @@ export const theme = createTheme({
           textTransform: 'initial',
           paddingRight: 20,
           paddingLeft: 20,
-          borderRadius: 8
+          borderRadius: 8,
+
+          '&.Mui-disabled': {
+            boxShadow: 'none',
+            color: 'rgba(0,0,0,0.7)',
+            backgroundColor: 'rgba(125,125,125,0.4)'
+          }
         }
       }
     },

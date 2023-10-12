@@ -23,10 +23,6 @@ const techs: TTechnologies[] = [
     iconName: 'SiVite'
   },
   {
-    label: 'Next JS',
-    iconName: 'SiNextdotjs'
-  },
-  {
     label: 'CSS',
     iconName: 'SiCss3'
   },

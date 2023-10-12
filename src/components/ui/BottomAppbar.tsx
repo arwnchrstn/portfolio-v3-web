@@ -32,6 +32,7 @@ function BottomAppbar() {
           <Box
             borderBottom={pathname.includes(link.path) ? 3 : 0}
             borderColor={blue['700']}
+            key={index}
           >
             <IconButton key={index} onClick={() => navigate(link.path)}>
               {
