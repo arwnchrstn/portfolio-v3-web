@@ -1,5 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import DescriptionIcon from '@mui/icons-material/Description'
 import { Box, Button, Stack } from '@mui/material'
 import { blue } from '@mui/material/colors'
 import { useState } from 'react'
@@ -10,8 +11,10 @@ import DialogComponent from '@/components/ui/Dialog'
 import { DARK } from '@/config/theme'
 import useIsSmallScreen from '@/hooks/useIsSmallScreen'
 
-type TSocialLinks = 'github' | 'linkedin'
+type TSocialLinks = 'github' | 'linkedin' | 'updated_cv'
 const socialLinks: Record<TSocialLinks, string> = {
+  updated_cv:
+    'https://docs.google.com/document/d/1-jQv4N7E2uHIYd3R0Lv44ab4DzMGUVyw7DAEYAawA3Y/edit',
   github: 'https://github.com/arwnchrstn',
   linkedin: 'https://www.linkedin.com/in/arwenceres/'
 }
@@ -43,7 +46,7 @@ function ImageBanner() {
         size={isSmallestScreen ? 'small' : 'medium'}
         onClick={() => setOpen(true)}
       >
-        Socials
+        Links
       </Button>
 
       <Box
@@ -63,12 +66,18 @@ function ImageBanner() {
         <img alt="Profile" src={Profile} width="100%" />
       </Box>
 
-      <DialogComponent
-        openDialog={open}
-        setOpenDialog={setOpen}
-        title="Socials"
-      >
+      <DialogComponent openDialog={open} setOpenDialog={setOpen} title="Links">
         <Stack gap={2} height="100%" justifyContent="center">
+          <Button
+            variant="outlined"
+            size="large"
+            color="primary"
+            startIcon={<DescriptionIcon sx={{ fill: blue['700'] }} />}
+            sx={{ fontWeight: 'bold' }}
+            onClick={openSocials.bind(null, 'updated_cv')}
+          >
+            Updated CV
+          </Button>
           <Button
             variant="outlined"
             size="large"
