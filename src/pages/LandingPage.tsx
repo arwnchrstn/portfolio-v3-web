@@ -2,7 +2,7 @@ import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 import ALogo from '@/assets/Logo.png'
-import ArwenSigninButton from '@/components/LandingPage/ArwenSigninButton'
+// import ArwenSigninButton from '@/components/LandingPage/ArwenSigninButton'
 import Navbar from '@/components/ui/Navbar'
 import useSetPageTitle from '@/hooks/useSetPageTitle'
 
