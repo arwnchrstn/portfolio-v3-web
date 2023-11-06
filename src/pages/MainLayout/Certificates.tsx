@@ -8,6 +8,16 @@ import { TCertificates } from '@/models/TCertificates'
 const certificates: TCertificates[] = [
   {
     learningPlatform: 'Udemy',
+    title: 'React Testing Library and Jest: The Complete Guide',
+    link: 'https://ude.my/UC-ea619819-72aa-4dd5-8f5f-821574148b12/'
+  },
+  {
+    learningPlatform: 'Udemy',
+    title: 'JavaScript Unit Testing - The Practical Guide',
+    link: 'https://ude.my/UC-b06575a9-2ddf-4231-a549-91d46be1c54d/'
+  },
+  {
+    learningPlatform: 'Udemy',
     title: 'Docker and Kubernetes',
     link: 'https://ude.my/UC-75603f65-b7e7-44c0-bfca-5374271b064b/'
   },
