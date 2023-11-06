@@ -17,8 +17,11 @@ const experiences: TExperienceCardProps[] = [
       to: 'Present'
     },
     responsibilities: [
-      'Create user interface base on client requirements',
-      'Design and code web applications using ReactJS, NodeJS and Material UI'
+      'Participated in brainstorming and creating user interface based on client requirements',
+      'Design and code web applications using React JS and Material UI',
+      'Participated in daily scrum meetings during project development',
+      'Using github to have a managed codebase for development and production',
+      'Design and create server side code using Node JS and MongoDB'
     ]
   },
   {
@@ -30,8 +33,9 @@ const experiences: TExperienceCardProps[] = [
       to: 'July 2022'
     },
     responsibilities: [
-      'Design and develop web application using React JS',
-      'Participate in creation of user stories for a web based project',
+      'Participated in brainstorming of user interface',
+      'Design and code using React JS',
+      'Participate in creation of user stories for a web based project with guidance',
       'Create and implement user interface for web and mobile'
     ]
   }
