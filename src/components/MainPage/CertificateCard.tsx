@@ -22,7 +22,8 @@ function CertificateCard(props: TCertificates) {
           </Typography>
 
           <Link
-            onClick={() => window.open(props.link)}
+            href={props.link}
+            target="_blank"
             sx={{ cursor: 'pointer' }}
             underline="none"
           >
